@@ -12,10 +12,7 @@ public class YellowBullet : MonoBehaviour {
     {
         if (other.transform.parent.gameObject.tag == "Board")
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            GetComponent<SpriteRenderer>().flipX = false;
-            dangerous = true;
+            StartCoroutine(ChangeBulletStats());
         }
 
         if (other.gameObject.tag == "YellowBullet")
@@ -39,6 +36,15 @@ public class YellowBullet : MonoBehaviour {
             Destroy(other.gameObject);
             Destroy(other.transform.parent.gameObject);
         }
+    }
+
+    IEnumerator ChangeBulletStats()
+    {
+        yield return new WaitForSeconds(0.7f);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        GetComponent<SpriteRenderer>().flipX = false;
+        dangerous = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

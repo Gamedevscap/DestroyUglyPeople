@@ -8,7 +8,6 @@ public class SFXManager : MonoBehaviour {
     [SerializeField] AudioClip playerMoveSFX;
     [SerializeField] AudioClip playerShootSFX;
     [SerializeField] AudioClip playerHitSFX;
-    [SerializeField] AudioClip playerDieSFX;
     [SerializeField] AudioClip enemyShootSFX;
     [SerializeField] AudioClip enemyDieSFX;
 
@@ -33,11 +32,6 @@ public class SFXManager : MonoBehaviour {
     public void PlayPlayerHitSFX()
     {
         audioSource.PlayOneShot(playerHitSFX, 0.2f);
-    }
-
-    public void PlayPlayerDieSFX()
-    {
-        audioSource.PlayOneShot(playerDieSFX, 0.5f);
     }
 
     public void PlayEnemyShootSFX()

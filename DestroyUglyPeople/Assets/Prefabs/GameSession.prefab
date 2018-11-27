@@ -364,11 +364,11 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  DopplerLevel: 0
+  MinDistance: 0
+  MaxDistance: 0.01
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -431,7 +431,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -693,8 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 114518382586404202}
-  scoreText: {fileID: 114261471376509122}
-  score: 0
+  enemiesCount: 0
   levelCompleteScreen: {fileID: 1177017974583388}
   scoreTextWinScreen: {fileID: 114032487961669690}
   gameoverScreen: {fileID: 1158849313087460}
@@ -1058,7 +1057,6 @@ MonoBehaviour:
   playerMoveSFX: {fileID: 8300000, guid: db1e4ceda95c5124f9a4ce1e5541bfcf, type: 3}
   playerShootSFX: {fileID: 8300000, guid: b204507b340e4484680326f70f954718, type: 3}
   playerHitSFX: {fileID: 8300000, guid: e297eb203c0b36d4c9e923f73441e18a, type: 3}
-  playerDieSFX: {fileID: 0}
   enemyShootSFX: {fileID: 8300000, guid: 19afc9bf26ea2084997134ae1347e2b7, type: 3}
   enemyDieSFX: {fileID: 8300000, guid: aa8e351f6dc0ee047a7016d0864bd9d0, type: 3}
 --- !u!114 &114798626648800006

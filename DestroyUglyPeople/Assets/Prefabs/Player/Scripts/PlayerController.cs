@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour {
     private void Update () {
         StepMove();
         Shoot();
+        BlockKeyCombos();
     }
 
     void StepMove()
@@ -76,6 +77,8 @@ public class PlayerController : MonoBehaviour {
 
     private void Shoot()
     {
+        
+
         if (Input.GetButtonDown("FireBlue"))
         {
             animator.SetTrigger("shooting");
@@ -113,11 +116,11 @@ public class PlayerController : MonoBehaviour {
 
     private void BlockKeyCombos()
     {
-        if (Input.GetButtonDown("FireBlue") && Input.GetButtonDown("FireRed"))
+        if (Input.GetButtonDown("FireBlue") && Input.GetButtonDown("FireGreen"))
         {
             return;
         }
-        if (Input.GetButtonDown("FireBlue") && Input.GetButtonDown("FireRed"))
+        if (Input.GetButtonDown("FireGreen") && Input.GetButtonDown("FireRed"))
         {
             return;
         }
