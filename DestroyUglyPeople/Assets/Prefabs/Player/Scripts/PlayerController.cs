@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour {
     private void Update () {
         StepMove();
         Shoot();
-        BlockKeyCombos();
     }
 
     void StepMove()
@@ -77,8 +76,6 @@ public class PlayerController : MonoBehaviour {
 
     private void Shoot()
     {
-        
-
         if (Input.GetButtonDown("FireBlue"))
         {
             animator.SetTrigger("shooting");
@@ -110,19 +107,6 @@ public class PlayerController : MonoBehaviour {
             bulletYellow.transform.parent = FindObjectOfType<Board>().transform;
             bulletYellow.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0);
             sfxManager.PlayPlayerShootSFX();
-        }
-        
-    }
-
-    private void BlockKeyCombos()
-    {
-        if (Input.GetButtonDown("FireBlue") && Input.GetButtonDown("FireGreen"))
-        {
-            return;
-        }
-        if (Input.GetButtonDown("FireGreen") && Input.GetButtonDown("FireRed"))
-        {
-            return;
         }
     }
 
